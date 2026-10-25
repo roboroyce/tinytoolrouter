@@ -1,0 +1,6 @@
+instance_id=i-0f2c9cef511c31e60
+instance_type=g5.xlarge
+region=us-east-1
+exit_code=0
+runtime_seconds=1711
+finished_at=2026-10-25T03:53:20Z

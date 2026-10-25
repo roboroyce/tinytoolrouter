@@ -1,0 +1,37 @@
+{
+  "seed": 11,
+  "n_train": 630,
+  "n_train_notool": 90,
+  "n_heldout": 231,
+  "n_seen_paraphrase": 131,
+  "n_unseen_schema": 60,
+  "n_no_tool": 40,
+  "sha256": {
+    "train": "11d7c2fa95204c4c217e1cb08507fc5ef3bbd9e8e4c35cf31613b6717b74733a",
+    "test": "cce723d12f6de9bd966d03daa255100c9526219bffca6b03996ba031bda3aea1",
+    "test_seen": "854f8ec41ed77fdd9f064e8e9ea0770e9ae56d5f9b641c45e3fd43b9ca07a0c8",
+    "test_unseen": "1b9ac1282f3cdb5061bf2b9e79882687cb78b36cf49f63256ef4dca0a7b2fcd3",
+    "test_notool": "76f724b9bebbf3266332981c0d71bd65ca116b8eb5c724c592096eecfb4702d4"
+  },
+  "seen_tools": [
+    "get_weather",
+    "send_email",
+    "create_calendar_event",
+    "search_web",
+    "convert_currency",
+    "set_timer",
+    "translate_text",
+    "filter_items",
+    "tag_note"
+  ],
+  "unseen_tools": [
+    "play_music",
+    "get_stock_price",
+    "book_restaurant",
+    "draw_chart",
+    "create_reminder"
+  ],
+  "leakage_check": "pass",
+  "duplicate_ids": [],
+  "notes": "Held-out = held-out templates AND held-out value pools; unseen_schema uses tools absent from training entirely."
+}

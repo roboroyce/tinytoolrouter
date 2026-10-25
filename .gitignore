@@ -1,0 +1,15 @@
+# Model weights and large artifacts (published on the Hugging Face Hub instead)
+artifacts/
+*.gguf
+*.safetensors
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# scratch
+/tmp/
+*.log.tmp

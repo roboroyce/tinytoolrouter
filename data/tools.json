@@ -1,0 +1,304 @@
+[
+  {
+    "description": "Get the current weather for a city.",
+    "name": "get_weather",
+    "parameters": {
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "city"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Send an email message.",
+    "name": "send_email",
+    "parameters": {
+      "properties": {
+        "body": {
+          "type": "string"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "to": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "to",
+        "subject",
+        "body"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Create a calendar event.",
+    "name": "create_calendar_event",
+    "parameters": {
+      "properties": {
+        "all_day": {
+          "type": "boolean"
+        },
+        "duration_minutes": {
+          "type": "integer"
+        },
+        "start": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "start"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Search the web.",
+    "name": "search_web",
+    "parameters": {
+      "properties": {
+        "limit": {
+          "type": "integer"
+        },
+        "query": {
+          "type": "string"
+        },
+        "safe_search": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "query"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Convert an amount between currencies.",
+    "name": "convert_currency",
+    "parameters": {
+      "properties": {
+        "amount": {
+          "type": "number"
+        },
+        "from_currency": {
+          "type": "string"
+        },
+        "to_currency": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "amount",
+        "from_currency",
+        "to_currency"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Start a countdown timer.",
+    "name": "set_timer",
+    "parameters": {
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "seconds": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "seconds"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Translate text into a language.",
+    "name": "translate_text",
+    "parameters": {
+      "properties": {
+        "formal": {
+          "type": "boolean"
+        },
+        "target_language": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "target_language"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Filter a product list by category and price.",
+    "name": "filter_items",
+    "parameters": {
+      "properties": {
+        "categories": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "in_stock_only": {
+          "type": "boolean"
+        },
+        "min_price": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "categories",
+        "min_price"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Attach tags to a note.",
+    "name": "tag_note",
+    "parameters": {
+      "properties": {
+        "content": {
+          "type": "string"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "content",
+        "tags"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Play a track at a volume.",
+    "name": "play_music",
+    "parameters": {
+      "properties": {
+        "track": {
+          "type": "string"
+        },
+        "volume": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "track"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Look up a share price.",
+    "name": "get_stock_price",
+    "parameters": {
+      "properties": {
+        "on_date": {
+          "type": "string"
+        },
+        "ticker": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ticker"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Book a table at a restaurant.",
+    "name": "book_restaurant",
+    "parameters": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "party_size": {
+          "type": "integer"
+        },
+        "time": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "party_size"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Render a simple chart from values.",
+    "name": "draw_chart",
+    "parameters": {
+      "properties": {
+        "chart_type": {
+          "type": "string"
+        },
+        "data": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "data",
+        "chart_type"
+      ],
+      "type": "object"
+    }
+  },
+  {
+    "description": "Create a reminder.",
+    "name": "create_reminder",
+    "parameters": {
+      "properties": {
+        "due": {
+          "type": "string"
+        },
+        "priority": {
+          "type": "integer"
+        },
+        "recurring": {
+          "type": "boolean"
+        },
+        "task": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "task",
+        "due"
+      ],
+      "type": "object"
+    }
+  }
+]

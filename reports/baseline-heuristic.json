@@ -1,0 +1,176 @@
+{
+  "backend": "heuristic",
+  "model_id": null,
+  "n": 42,
+  "valid_structured_output_rate": 0.0,
+  "tool_selection_accuracy": 0.9524,
+  "argument_accuracy": 0.0,
+  "exact_match_accuracy": 0.0,
+  "sample_failures": [
+    {
+      "id": "5fd9b1220e4203cd",
+      "pred": "{\"name\": \"get_weather\", \"arguments\": {}}",
+      "gold": {
+        "arguments": {
+          "city": "Reykjavik"
+        },
+        "name": "get_weather"
+      },
+      "scored": {
+        "parse_ok": false,
+        "tool_correct": true,
+        "args_correct": false,
+        "exact_match": false
+      }
+    },
+    {
+      "id": "88254f79ad4b04e3",
+      "pred": "{\"name\": \"set_timer\", \"arguments\": {}}",
+      "gold": {
+        "arguments": {
+          "seconds": 45
+        },
+        "name": "set_timer"
+      },
+      "scored": {
+        "parse_ok": false,
+        "tool_correct": true,
+        "args_correct": false,
+        "exact_match": false
+      }
+    },
+    {
+      "id": "17001d07af5033df",
+      "pred": "{\"name\": \"create_calendar_event\", \"arguments\": {}}",
+      "gold": {
+        "arguments": {
+          "duration_minutes": 15,
+          "start": "2026-12-05T16:45",
+          "title": "planning"
+        },
+        "name": "create_calendar_event"
+      },
+      "scored": {
+        "parse_ok": false,
+        "tool_correct": true,
+        "args_correct": false,
+        "exact_match": false
+      }
+    },
+    {
+      "id": "0cfcea7a7ac62990",
+      "pred": "{\"name\": \"get_weather\", \"arguments\": {}}",
+      "gold": {
+        "arguments": {
+          "city": "Perth"
+        },
+        "name": "get_weather"
+      },
+      "scored": {
+        "parse_ok": false,
+        "tool_correct": true,
+        "args_correct": false,
+        "exact_match": false
+      }
+    },
+    {
+      "id": "25ea30a6c8fc2c34",
+      "pred": "{\"name\": \"get_weather\", \"arguments\": {}}",
+      "gold": {
+        "arguments": {
+          "city": "Perth"
+        },
+        "name": "get_weather"
+      },
+      "scored": {
+        "parse_ok": false,
+        "tool_correct": true,
+        "args_correct": false,
+        "exact_match": false
+      }
+    },
+    {
+      "id": "a6fe3a9d19598ba9",
+      "pred": "{\"name\": \"translate_text\", \"arguments\": {}}",
+      "gold": {
+        "arguments": {
+          "path": "~/Downloads"
+        },
+        "name": "list_files"
+      },
+      "scored": {
+        "parse_ok": false,
+        "tool_correct": false,
+        "args_correct": false,
+        "exact_match": false
+      }
+    },
+    {
+      "id": "603c3acb18eae947",
+      "pred": "{\"name\": \"translate_text\", \"arguments\": {}}",
+      "gold": {
+        "arguments": {
+          "path": "/tmp"
+        },
+        "name": "list_files"
+      },
+      "scored": {
+        "parse_ok": false,
+        "tool_correct": false,
+        "args_correct": false,
+        "exact_match": false
+      }
+    },
+    {
+      "id": "1991f58065f6d8d2",
+      "pred": "{\"name\": \"send_email\", \"arguments\": {}}",
+      "gold": {
+        "arguments": {
+          "body": "please review",
+          "subject": "release notes",
+          "to": "kim@example.com"
+        },
+        "name": "send_email"
+      },
+      "scored": {
+        "parse_ok": false,
+        "tool_correct": true,
+        "args_correct": false,
+        "exact_match": false
+      }
+    },
+    {
+      "id": "55a0156cd94c5ef8",
+      "pred": "{\"name\": \"set_timer\", \"arguments\": {}}",
+      "gold": {
+        "arguments": {
+          "seconds": 1200
+        },
+        "name": "set_timer"
+      },
+      "scored": {
+        "parse_ok": false,
+        "tool_correct": true,
+        "args_correct": false,
+        "exact_match": false
+      }
+    },
+    {
+      "id": "10096fc177c0b9b5",
+      "pred": "{\"name\": \"translate_text\", \"arguments\": {}}",
+      "gold": {
+        "arguments": {
+          "target_language": "Korean",
+          "text": "congratulations"
+        },
+        "name": "translate_text"
+      },
+      "scored": {
+        "parse_ok": false,
+        "tool_correct": true,
+        "args_correct": false,
+        "exact_match": false
+      }
+    }
+  ]
+}

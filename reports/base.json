@@ -1,0 +1,398 @@
+{
+  "backend": "transformers",
+  "model_id": "Qwen/Qwen3-0.6B",
+  "overall": {
+    "n": 231,
+    "json_parse_rate": 0.9913,
+    "valid_structured_output_rate": 0.9913,
+    "tool_selection_accuracy": 0.9351,
+    "argument_accuracy": 0.5195,
+    "exact_match_accuracy": 0.5195,
+    "no_tool_precision": 0.7647,
+    "no_tool_recall": 0.975,
+    "no_tool_f1": 0.8571,
+    "sample_failures": [
+      {
+        "id": "a39e3308e0f2ed82",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"translate_text\", \"arguments\": {\"formal\": true, \"target_language\": \"Dutch\", \"text\": \"Goed weten, neem care in het algemeen.\"}}",
+        "gold": {
+          "arguments": {
+            "target_language": "Dutch",
+            "text": "take care"
+          },
+          "name": "translate_text"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "6b701d1ceae80f9d",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"create_calendar_event\", \"arguments\": {\"title\": \"onboarding\", \"start\": \"2027-03-10T08:30\", \"duration_minutes\": 450}}",
+        "gold": {
+          "arguments": {
+            "duration_minutes": 75,
+            "start": "2027-03-10T08:30",
+            "title": "onboarding"
+          },
+          "name": "create_calendar_event"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "b49688dfbd69e049",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Dakar\"}}",
+        "gold": {
+          "arguments": {
+            "city": "Dakar",
+            "unit": "kelvin"
+          },
+          "name": "get_weather"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "667792e88f789441",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"tag_note\", \"arguments\": {\"content\": \"Attach later and low to the note pick up parcel.\", \"tags\": [\"low\", \"later\"]}}",
+        "gold": {
+          "arguments": {
+            "content": "pick up parcel",
+            "tags": [
+              "later",
+              "low"
+            ]
+          },
+          "name": "tag_note"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "6d17a0fca8554f24",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"tag_note\", \"arguments\": {\"content\": \"Attach travel to the note pick up parcel.\", \"tags\": [\"travel\", \"parcel\"]}}",
+        "gold": {
+          "arguments": {
+            "content": "pick up parcel",
+            "tags": [
+              "travel"
+            ]
+          },
+          "name": "tag_note"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "3e51dbf93f153935",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"no_tool\", \"arguments\": {}}",
+        "gold": {
+          "arguments": {
+            "city": "Tbilisi"
+          },
+          "name": "get_weather"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": false,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": true,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "56e13159141cc3da",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"filter_items\", \"arguments\": {\"categories\": [\"cookware\", \"utensils\"], \"min_price\": 0}}",
+        "gold": {
+          "arguments": {
+            "categories": [
+              "cookware",
+              "utensils"
+            ],
+            "min_price": 15
+          },
+          "name": "filter_items"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "58b9ee2b4c3a36f6",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"convert_currency\", \"arguments\": {\"amount\": 3500, \"from_currency\": \"SEK\", \"to_currency\": \"NZD\"}}",
+        "gold": {
+          "arguments": {
+            "amount": 3.5,
+            "from_currency": "SEK",
+            "to_currency": "NZD"
+          },
+          "name": "convert_currency"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "7fbd969414722d23",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Perth\"}}",
+        "gold": {
+          "arguments": {
+            "city": "Perth",
+            "unit": "kelvin"
+          },
+          "name": "get_weather"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "514beac8d8b5bb55",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"no_tool\", \"arguments\": {}}",
+        "gold": {
+          "arguments": {
+            "city": "Hanoi"
+          },
+          "name": "get_weather"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": false,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": true,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "826aa984c83fe045",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"send_email\", \"arguments\": {\"body\": \"no action needed.\", \"subject\": \"receipt\", \"to\": \"zoe@example.com\"}}",
+        "gold": {
+          "arguments": {
+            "body": "no action needed",
+            "subject": "receipt",
+            "to": "zoe@example.com"
+          },
+          "name": "send_email"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "ff27342315af9b39",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Reykjavik\"}}",
+        "gold": {
+          "arguments": {
+            "city": "Reykjavik",
+            "unit": "kelvin"
+          },
+          "name": "get_weather"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "aa5d6fcfa93c9b1b",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"filter_items\", \"arguments\": {\"categories\": [\"cookware\", \"utensils\"], \"min_price\": 0}}",
+        "gold": {
+          "arguments": {
+            "categories": [
+              "cookware",
+              "utensils"
+            ],
+            "min_price": 400
+          },
+          "name": "filter_items"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "6329bb70b43ff7b0",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"get_weather\", \"arguments\": {\"city\": \"Hanoi\"}}",
+        "gold": {
+          "arguments": {
+            "city": "Hanoi",
+            "unit": "kelvin"
+          },
+          "name": "get_weather"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "6d25d31fb7d55410",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"create_calendar_event\", \"arguments\": {\"title\": \"Note onboarding down\", \"start\": \"2027-04-21T13:15\"}}",
+        "gold": {
+          "arguments": {
+            "start": "2027-04-21T13:15",
+            "title": "onboarding"
+          },
+          "name": "create_calendar_event"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      }
+    ]
+  },
+  "unseen_schema_exact_match": 0.85,
+  "by_family": {
+    "no_tool": {
+      "n": 40,
+      "json_parse_rate": 1.0,
+      "valid_structured_output_rate": 1.0,
+      "tool_selection_accuracy": 0.975,
+      "argument_accuracy": 0.975,
+      "exact_match_accuracy": 0.975,
+      "no_tool_precision": 1.0,
+      "no_tool_recall": 0.975,
+      "no_tool_f1": 0.9873
+    },
+    "seen_paraphrase": {
+      "n": 131,
+      "json_parse_rate": 1.0,
+      "valid_structured_output_rate": 1.0,
+      "tool_selection_accuracy": 0.9313,
+      "argument_accuracy": 0.229,
+      "exact_match_accuracy": 0.229,
+      "no_tool_precision": 0.0,
+      "no_tool_recall": null,
+      "no_tool_f1": 0.0
+    },
+    "unseen_schema": {
+      "n": 60,
+      "json_parse_rate": 0.9667,
+      "valid_structured_output_rate": 0.9667,
+      "tool_selection_accuracy": 0.9167,
+      "argument_accuracy": 0.85,
+      "exact_match_accuracy": 0.85,
+      "no_tool_precision": 0.0,
+      "no_tool_recall": null,
+      "no_tool_f1": 0.0
+    }
+  },
+  "data_files": [
+    "data/test.jsonl"
+  ]
+}

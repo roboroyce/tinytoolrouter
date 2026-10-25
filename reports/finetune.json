@@ -1,0 +1,400 @@
+{
+  "backend": "transformers",
+  "model_id": "artifacts/tinytoolrouter-0.6b/merged",
+  "overall": {
+    "n": 231,
+    "json_parse_rate": 0.9913,
+    "valid_structured_output_rate": 0.9913,
+    "tool_selection_accuracy": 0.987,
+    "argument_accuracy": 0.9221,
+    "exact_match_accuracy": 0.9221,
+    "no_tool_precision": 0.9756,
+    "no_tool_recall": 1.0,
+    "no_tool_f1": 0.9877,
+    "sample_failures": [
+      {
+        "id": "667792e88f789441",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"tag_note\", \"arguments\": {\"content\": \"later and low\", \"tags\": [\"note\", \"pick up parcel\"]}}",
+        "gold": {
+          "arguments": {
+            "content": "pick up parcel",
+            "tags": [
+              "later",
+              "low"
+            ]
+          },
+          "name": "tag_note"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "6d17a0fca8554f24",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"tag_note\", \"arguments\": {\"content\": \"travel\", \"tags\": [\"pick up parcel\"]}}",
+        "gold": {
+          "arguments": {
+            "content": "pick up parcel",
+            "tags": [
+              "travel"
+            ]
+          },
+          "name": "tag_note"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "6ec8409a06c79be2",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"tag_note\", \"arguments\": {\"content\": \"travel\", \"tags\": [\"back up laptop\"]}}",
+        "gold": {
+          "arguments": {
+            "content": "back up laptop",
+            "tags": [
+              "travel"
+            ]
+          },
+          "name": "tag_note"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "7577190e28657c95",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"tag_note\", \"arguments\": {\"content\": \"note back up laptop\", \"tags\": [\"later\", \"low\"]}}",
+        "gold": {
+          "arguments": {
+            "content": "back up laptop",
+            "tags": [
+              "later",
+              "low"
+            ]
+          },
+          "name": "tag_note"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "4ad591528900cfef",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"translate_text\", \"arguments\": {\"text\": \"good evening\", \"target_language\": \"Swahili\", \"formal\": true}}",
+        "gold": {
+          "arguments": {
+            "target_language": "Swahili",
+            "text": "good evening"
+          },
+          "name": "translate_text"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "688a494a26761eca",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"set_timer\", \"arguments\": {\"seconds\": 1800}}",
+        "gold": {
+          "arguments": {
+            "label": "cooldown",
+            "seconds": 1800
+          },
+          "name": "set_timer"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "4ff3400532e80eae",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"set_timer\", \"arguments\": {\"seconds\": 25}}",
+        "gold": {
+          "arguments": {
+            "label": "proofing",
+            "seconds": 25
+          },
+          "name": "set_timer"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "d6020be216668b72",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"translate_text\", \"arguments\": {\"text\": \"good evening\", \"target_language\": \"Dutch\", \"formal\": true}}",
+        "gold": {
+          "arguments": {
+            "target_language": "Dutch",
+            "text": "good evening"
+          },
+          "name": "translate_text"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "a9811a32f59b3253",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"set_timer\", \"arguments\": {\"seconds\": 1800}}",
+        "gold": {
+          "arguments": {
+            "label": "proofing",
+            "seconds": 1800
+          },
+          "name": "set_timer"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "b11c21f60f8cf80e",
+        "family": "seen_paraphrase",
+        "pred": "{\"name\": \"set_timer\", \"arguments\": {\"seconds\": 25}}",
+        "gold": {
+          "arguments": {
+            "label": "cooldown",
+            "seconds": 25
+          },
+          "name": "set_timer"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "3e209bcfd168012b",
+        "family": "unseen_schema",
+        "pred": "{\"name\": \"play_music\", \"arguments\": {\"track\": \"Africa\", \"volume\": 100}}",
+        "gold": {
+          "arguments": {
+            "track": "Africa"
+          },
+          "name": "play_music"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "467d260ff0a0d7ab",
+        "family": "unseen_schema",
+        "pred": "{\"name\": \"draw_chart\", \"arguments\": {\"data\": [{\"1.5\"}, {\"2.5\"}], \"chart_type\": \"bar\"}}",
+        "gold": {
+          "arguments": {
+            "chart_type": "bar",
+            "data": [
+              1.5,
+              2.5
+            ]
+          },
+          "name": "draw_chart"
+        },
+        "scored": {
+          "json_parsed": false,
+          "normalized": false,
+          "parse_ok": false,
+          "tool_correct": false,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "39e5256531d69bcd",
+        "family": "unseen_schema",
+        "pred": "{\"name\": \"create_reminder\", \"arguments\": {\"task\": \"PR\", \"due\": \"2026-07-15\", \"priority\": 5}}",
+        "gold": {
+          "arguments": {
+            "due": "2026-07-15",
+            "priority": 5,
+            "task": "review PR"
+          },
+          "name": "create_reminder"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "ba23f68a50b4f17a",
+        "family": "unseen_schema",
+        "pred": "{\"name\": \"no_tool\", \"arguments\": {}}",
+        "gold": {
+          "arguments": {
+            "on_date": "2026-06-30",
+            "ticker": "SAP"
+          },
+          "name": "get_stock_price"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": false,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": true,
+          "gold_is_notool": false
+        }
+      },
+      {
+        "id": "2ec42770addd4ad8",
+        "family": "unseen_schema",
+        "pred": "{\"name\": \"create_reminder\", \"arguments\": {\"task\": \"PR\", \"due\": \"2026-07-01\", \"priority\": 5}}",
+        "gold": {
+          "arguments": {
+            "due": "2026-07-01",
+            "priority": 5,
+            "task": "review PR"
+          },
+          "name": "create_reminder"
+        },
+        "scored": {
+          "json_parsed": true,
+          "normalized": true,
+          "parse_ok": true,
+          "tool_correct": true,
+          "args_correct": false,
+          "exact_match": false,
+          "pred_is_notool": false,
+          "gold_is_notool": false
+        }
+      }
+    ]
+  },
+  "unseen_schema_exact_match": 0.8667,
+  "by_family": {
+    "no_tool": {
+      "n": 40,
+      "json_parse_rate": 1.0,
+      "valid_structured_output_rate": 1.0,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 1.0,
+      "exact_match_accuracy": 1.0,
+      "no_tool_precision": 1.0,
+      "no_tool_recall": 1.0,
+      "no_tool_f1": 1.0
+    },
+    "seen_paraphrase": {
+      "n": 131,
+      "json_parse_rate": 1.0,
+      "valid_structured_output_rate": 1.0,
+      "tool_selection_accuracy": 1.0,
+      "argument_accuracy": 0.9237,
+      "exact_match_accuracy": 0.9237,
+      "no_tool_precision": null,
+      "no_tool_recall": null,
+      "no_tool_f1": null
+    },
+    "unseen_schema": {
+      "n": 60,
+      "json_parse_rate": 0.9667,
+      "valid_structured_output_rate": 0.9667,
+      "tool_selection_accuracy": 0.95,
+      "argument_accuracy": 0.8667,
+      "exact_match_accuracy": 0.8667,
+      "no_tool_precision": 0.0,
+      "no_tool_recall": null,
+      "no_tool_f1": 0.0
+    }
+  },
+  "data_files": [
+    "data/test.jsonl"
+  ]
+}
